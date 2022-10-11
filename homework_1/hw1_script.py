@@ -1,13 +1,25 @@
-complement_dict = {'A': 'T', 'T': 'A', 'G': 'C', 'C': 'G', 'U': 'A'}
+"""Необходимо реализовать программу, которая в бесконечном цикле считывает команды от
+пользователя. После команды программа должна запрашивать у пользователя
+последовательность нуклеиновой кислоты и распечатывать результат.
+Список команд:
+exit — завершение исполнения программы
+transcribe — напечатать транскрибированную последовательность
+reverse — напечатать перевёрнутую последовательность
+complement — напечатать комплементарную последовательность
+reverse complement — напечатать обратную комплементарную последовательность
++ любые дополнительные команды на ваш страх и риск (опционально)
+Требования:
+Программа должна сохранять регистр символов (напр. complement AtGc это TaCg)
+Программа должна работать только с последовательностями нуклеиновых кислот. К примеру, последовательность AUTGC не может
+существовать, так как содержит T и U, такие случаи нужно обрабатывать и сообщать об этом пользователю (см. пример).
+Запрещается использование сторонних модулей
+"""
+
+complement_dict = {'A': 'T', 'T': 'A', 'G': 'C', 'C': 'G', 'U': 'A', 'a': 't', 't': 'a', 'g': 'c', 'c': 'g', 'u': 'a'}
 
 
 def complement(seq):
-    complement_seq = ''
-    for nucl in seq:
-        if nucl.islower():
-            complement_seq += complement_dict[nucl.upper()].lower()
-        else:
-            complement_seq += complement_dict[nucl]
+    complement_seq = ''.join([complement_dict[nucl] for nucl in seq])
     return complement_seq
 
 
@@ -41,10 +53,14 @@ while True:
         if command in ['complement', 'c']:
             print(complement(sequence))
         elif command in ['transcribe', 't']:
-            print(transcribe(sequence))
+            if 'U' in sequence or 'u' in sequence:
+                print('It seems to be an RNA sequence. Please, try again with DNA.')
+            else:
+                print(transcribe(sequence))
         elif command in ['reverse', 'r']:
             print(reverse(sequence))
         elif command in ['reverse complement', 'rc']:
             sequence = reverse(sequence)
             print(complement(sequence))
+
 
