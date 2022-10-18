@@ -48,9 +48,9 @@ or manually
 `$ pip install --upgrade --no-deps google-api-python-client beautifulsoup4 requests urllib3 charset_normalizer idna certifi biopython aiohttp multidict attrs yarl async_timeout aiosignal frozenlist six pandas numpy pytz python-dateutil opencv-python lxml`    
     
 Solving "ValueError: index cannot be a set" of the Pandas module:  
-`$ sed -i '636s/^/#/' /your/path/to/lib/python3.11/site-packages/pandas/core/frame.py; sed -i '637s/^/#/' /your/path/to/lib/python3.11/site-packages/pandas/core/frame.py`
-for example:   
-`$ sed -i '636s/^/#/' /home/oxana/environment/lib/python3.11/site-packages/pandas/core/frame.py; sed -i '637s/^/#/' /home/oxana/environment/lib/python3.11/site-packages/pandas/core/frame.py`
+`$ sed -i '636s/^/#/' /your/path/to/lib/python3.11/site-packages/pandas/core/frame.py; sed -i '637s/^/#/' /your/path/to/lib/python3.11/site-packages/pandas/core/frame.py`        
+for example:     
+`$ sed -i '636s/^/#/' /home/oxana/environment/lib/python3.11/site-packages/pandas/core/frame.py; sed -i '637s/^/#/' /home/oxana/environment/lib/python3.11/site-packages/pandas/core/frame.py`    
 
 ### Good job! Now you can run ultraviolence.py!
 
