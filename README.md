@@ -184,6 +184,6 @@ This will start the Jupyter server and your browser will open a new tab where yo
 > ...and activate it:     
 > `$ source environment/bin/activate`      
 > You can install modules from requirements.txt         
-> `$ pip install -r https://github.com/CyanusCentaurea/Python_BI_2022/blob/homework_6/homework_6/requirements.txt`
+> `$ pip install -r https://github.com/CyanusCentaurea/Python_BI_2022/blob/homework_6/homework_6/requirements.txt`       
 > Now you can run regexp_hw.py:      
 > `$ python3.11 regexp_hw.py`
