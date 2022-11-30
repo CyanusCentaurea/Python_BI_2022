@@ -17,4 +17,3 @@
 > Например, my_chain = func_chain(lambda x: x + 2, lambda x: (x/4, x//4)). my_chain(37) -> (9.75, 9)      
 
 5. *my_print* - полный аналог функции *print* (без аргумента flush).
-> Например, my_chain = func_chain(lambda x: x + 2, lambda x: (x/4, x//4)). my_chain(37) -> (9.75, 9)      
